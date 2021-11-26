@@ -1,0 +1,13 @@
+import './admin-user';
+import './profile-edit-profile';
+import './profile-edit-password';
+import './banner';
+import './technology';
+import './product';
+import './president-message';
+import './company-history';
+import './product-application';
+import './company-profile';
+import './certification-policy';
+import './recruitment';
+import './visitor';
