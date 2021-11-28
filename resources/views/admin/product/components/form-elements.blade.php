@@ -42,11 +42,33 @@
     </div>
 </div>
 
-<div class="form-group row align-items-center" :class="{'has-danger': errors.has('product_application_id'), 'has-success': fields.product_application_id && fields.product_application_id.valid }">
+{{-- <div class="form-group row align-items-center" :class="{'has-danger': errors.has('product_application_id'), 'has-success': fields.product_application_id && fields.product_application_id.valid }">
     <label for="product_application_id" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.product.columns.product_application_id') }}</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
         <input type="text" v-model="form.product_application_id" v-validate="'required|integer'" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('product_application_id'), 'form-control-success': fields.product_application_id && fields.product_application_id.valid}" id="product_application_id" name="product_application_id" placeholder="{{ trans('admin.product.columns.product_application_id') }}">
         <div v-if="errors.has('product_application_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('product_application_id') }}</div>
+    </div>
+</div> --}}
+
+<div class="form-group row align-items-center"
+:class="{'has-danger': errors.has('product_application_id'), 'has-success': this.fields.product_application_id && this.fields.product_application_id.valid }">
+    <label for="product_application_id"
+    class="col-form-label text-md-right"  :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.product.columns.product_application_id') }}</label>
+    <div  :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
+
+        <multiselect
+        v-model="form.product_application"
+        :options="{{ $product_applications }}"
+        :multiple="false"
+        track-by="id"
+        label="en_title"
+        tag-placeholder="{{ __('Select Product Application') }}"
+        placeholder="{{ __('Product Application') }}">
+        </multiselect>
+
+        <div v-if="errors.has('product_application_id')" class="form-control-feedback form-text" v-cloak>@{{
+        errors.first('product_application_id') }}
+        </div>
     </div>
 </div>
 

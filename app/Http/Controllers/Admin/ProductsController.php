@@ -9,6 +9,7 @@ use App\Http\Requests\Admin\Product\IndexProduct;
 use App\Http\Requests\Admin\Product\StoreProduct;
 use App\Http\Requests\Admin\Product\UpdateProduct;
 use App\Models\Product;
+use App\Models\ProductApplication;
 use Brackets\AdminListing\Facades\AdminListing;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -65,7 +66,7 @@ class ProductsController extends Controller
     {
         $this->authorize('admin.product.create');
 
-        return view('admin.product.create');
+        return view('admin.product.create', ['product_applications' => ProductApplication::all()]);
     }
 
     /**
@@ -113,10 +114,12 @@ class ProductsController extends Controller
     public function edit(Product $product)
     {
         $this->authorize('admin.product.edit', $product);
-
+        $product_application = ProductApplication::find($product->product_application_id);
+        $product->product_application=$product_application;
 
         return view('admin.product.edit', [
             'product' => $product,
+            'product_applications' =>ProductApplication::all()
         ]);
     }
 

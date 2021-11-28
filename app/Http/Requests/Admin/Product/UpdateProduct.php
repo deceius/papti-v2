@@ -30,9 +30,16 @@ class UpdateProduct extends FormRequest
             'en_description' => ['sometimes', 'string'],
             'jp_name' => ['sometimes', 'string'],
             'jp_description' => ['sometimes', 'string'],
-            'product_application_id' => ['sometimes', 'integer'],
-            
+
         ];
+    }
+
+
+    public function getApplicationId(){
+        if ($this->has('product_application')){
+            return $this->get('product_application')['id'];
+        }
+        return null;
     }
 
     /**
@@ -43,6 +50,7 @@ class UpdateProduct extends FormRequest
     public function getSanitized(): array
     {
         $sanitized = $this->validated();
+        $sanitized["product_application_id"] = $this->getApplicationId();
 
 
         //Add your code for manipulation with request data here

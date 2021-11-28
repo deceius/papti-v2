@@ -28,11 +28,17 @@ class StoreProduct extends FormRequest
         return [
             'en_name' => ['required', 'string'],
             'en_description' => ['required', 'string'],
-            'jp_name' => ['required', 'string'],
-            'jp_description' => ['required', 'string'],
-            'product_application_id' => ['required', 'integer'],
-            
+            'jp_name' => [],
+            'jp_description' => [],
+
         ];
+    }
+
+    public function getApplicationId(){
+        if ($this->has('product_application')){
+            return $this->get('product_application')['id'];
+        }
+        return null;
     }
 
     /**
@@ -43,6 +49,7 @@ class StoreProduct extends FormRequest
     public function getSanitized(): array
     {
         $sanitized = $this->validated();
+        $sanitized["product_application_id"] = $this->getApplicationId();
 
         //Add your code for manipulation with request data here
 

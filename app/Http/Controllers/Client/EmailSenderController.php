@@ -37,5 +37,7 @@ class EmailSenderController extends Controller
               ('['.$data['type'].']Papti Contact Message - '.$data['email']);
            $message->from('webmailer@papti.com','Papti Webmailer');
         });
+
+        return redirect()->back();
      }
 }

@@ -30,7 +30,7 @@
                                     </div>
                                     <div class="col-sm-auto form-group ">
                                         <select class="form-control" v-model="pagination.state.per_page">
-                                            
+
                                             <option value="10">10</option>
                                             <option value="25">25</option>
                                             <option value="100">100</option>
@@ -52,7 +52,7 @@
                                         <th is='sortable' :column="'id'">{{ trans('admin.product.columns.id') }}</th>
                                         <th is='sortable' :column="'en_name'">{{ trans('admin.product.columns.en_name') }}</th>
                                         <th is='sortable' :column="'jp_name'">{{ trans('admin.product.columns.jp_name') }}</th>
-                                        <th is='sortable' :column="'product_application_id'">{{ trans('admin.product.columns.product_application_id') }}</th>
+                                        {{-- <th is='sortable' :column="'product_application_id'">{{ trans('admin.product.columns.product_application_id') }}</th> --}}
 
                                         <th></th>
                                     </tr>
@@ -79,8 +79,8 @@
                                     <td>@{{ item.id }}</td>
                                         <td>@{{ item.en_name }}</td>
                                         <td>@{{ item.jp_name }}</td>
-                                        <td>@{{ item.product_application_id }}</td>
-                                        
+                                        {{-- <td>@{{ item.product_application_id }}</td> --}}
+
                                         <td>
                                             <div class="row no-gutters">
                                                 <div class="col-auto">
