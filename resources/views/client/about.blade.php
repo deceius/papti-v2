@@ -1,6 +1,6 @@
-@extends('client.layouts.footer')
 
-@section('content')
+
+@include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 <style>
     .papti-about table, tr, td {
             border: none;
@@ -69,21 +69,21 @@
 
             <section id="section-president" class="page-section">
                 <div class="row align-items-stretch ">
-                    <div class="col-md-6 col-padding min-vh-75 order-md-last" style="background: url('{{ $profile->getMedia('pr_image')[0]->getUrl() }}') center center no-repeat; background-size: cover;"></div>
+                    <div class="col-md-6 col-padding min-vh-75 order-md-last" style="background: url('{{ $pres_message->getMedia('image')[0]->getUrl() }}') center center no-repeat; background-size: cover;"></div>
 
                     <div class="col-md-6 col-padding" style="background-color: #F5F5F5;">
                         <div>
                             <div class="heading-block">
-                                
-                             
 
-                                <h3>{{ ($lang == 'en') ? $profile->en_president : $profile->jp_president }} </h3>
+
+
+                                <h3>{{ ($lang == 'en') ? $pres_message->en_name : $pres_message->jp_name }} </h3>
                                    <span class="before-heading color">President</span>
                             </div>
 
                             <div class="row col-mb-50">
                                 <div class="col-lg-11" style="text-align:justify;">
-                                    {!!  ($lang == 'en') ? $profile->en_president_message : $profile->jp_president_message!!}
+                                    {!!  ($lang == 'en') ? $pres_message->en_message : $pres_message->jp_message !!}
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                         <tbody>
                                             <tr>
                                                 <td class="border-top-0"><strong>Company Name:</strong></td>
-                                                <td class="border-top-0">{{ $profile->name }}</td>
+                                                <td class="border-top-0">{{ $profile->company_name }}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Date Established:</strong></td>
@@ -123,23 +123,23 @@
                                              </tr>
                                             <tr>
                                                 <td><strong>Main Factory/ Office:</strong></td>
-                                                <td>{{ $profile->address }}</td>
+                                                <td>{{ $profile->company_address }}</td>
                                             </tr>
-                                            <!--<tr>-->
-                                            <!--    <td><strong>Sales Email:</strong></td>-->
-                                            <!--    <td>{{ $profile->email_sales }}</td>-->
-                                            <!--</tr>-->
-                                            <!--<tr>-->
-                                            <!--    <td><strong>HR Email:</strong></td>-->
-                                            <!--    <td>{{ $profile->email_hr }}</td>-->
-                                            <!--</tr>-->
-                                            <!--<tr>-->
-                                            <!--    <td><strong>Company Email:</strong></td>-->
-                                            <!--    <td>{{ $profile->email_others }}</td>-->
-                                            <!--</tr>-->
+                                            <tr>
+                                                <td><strong>Sales Email:</strong></td>
+                                                <td>{{ $profile->email_sales }}</td>
+                                             </tr>
+                                             <tr>
+                                                <td><strong>HR Email:</strong></td>
+                                                <td>{{ $profile->email_hr }}</td>
+                                             </tr>
+                                             <tr>
+                                                <td><strong>Company Email:</strong></td>
+                                                <td>{{ $profile->email_company }}</td>
+                                             </tr>
                                              <tr>
                                                 <td><strong>Production Line:</strong></td>
-                                                <td>{{  ($lang == 'en') ?  $profile->en_product_line :  $profile->jp_product_line}}</td>
+                                                <td>{{  ($lang == 'en') ?  $profile->en_production_line :  $profile->jp_production_line}}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -161,8 +161,8 @@
                     <div class="position-relative">
 
 
-                 
-                        
+
+
                         <div class="postcontent col-lg-9">
 
 							<!-- Posts
@@ -173,20 +173,20 @@
 
 								    <div class="entry"  data-aos="fade-up">
 									<div class="entry-timeline" style="padding-top: 20px; font-size: 1.3rem;">
-										{{ $history->date_year }}
+										{{ $history->year_date }}
 										<div class="timeline-divider"></div>
 									</div>
 									<div class="entry-image">
 										<blockquote>
-											{!! ($lang == 'en') ? $history->en_details : $history->jp_details !!}
+											{!! ($lang == 'en') ? $history->en_description : $history->jp_description !!}
 											<footer>&nbsp;</footer>
 										</blockquote>
 									</div>
-								
+
 								</div>
 
                             @endforeach
-                            
+
                         @endif
 							</div><!-- #posts end -->
 
@@ -209,7 +209,7 @@
                             <div class="row col-mb-50">
 
                                 <div class="col-lg-12">
-                                    {!! ($lang == 'en') ? $profile->en_iso_certificate : $profile->jp_iso_certificate !!}
+                                    {!! ($lang == 'en') ? $policy->en_iso : $policy->jp_iso !!}
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                                 <div class="col-lg-12 papti-about">
                                     <div>
 
-                                    {!! ($lang == 'en') ? $profile->en_ims_policy : $profile->jp_ims_policy !!}
+                                    {!! ($lang == 'en') ? $policy->en_ims : $policy->jp_ims !!}
                                     </div>
 
                                 </div>
@@ -249,5 +249,5 @@
 
 </div>
 
-@endsection
-@extends(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
+@include('client.layouts.footer')
+

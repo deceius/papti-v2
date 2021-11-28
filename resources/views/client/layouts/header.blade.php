@@ -76,72 +76,6 @@
 <body class="stretched">
 
 
-	<div class="body-overlay"></div>
-	<div id="side-panel">
-
-		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
-
-		<div class="side-panel-wrap">
-
-			<div class="widget clearfix">
-
-
-
-
-				<h4>Contact Us</h4>
-
-				<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
-
-					<div class="form-process">
-						<div class="css3-spinner">
-							<div class="css3-spinner-scaler"></div>
-						</div>
-					</div>
-
-					<div class="col-md-12 form-group">
-						<input placeholder="Full Name" type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
-					</div>
-
-					<div class="col-md-12 form-group">
-						<input placeholder="E-mail" type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="col-12 form-group">
-						<input placeholder="Phone No." type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
-					</div>
-                    <div class="col-12 form-group">
-                        <label for="template-contactform-service">Inquiry Item</label>
-                        <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
-                            <option value="">-- Select One --</option>
-                            <option value="About our Products">About our Products</option>
-                            <option value="Recruitment / Hiring">Recruitment / Hiring</option>
-                            <option value="Others">Others</option>
-                        </select>
-                    </div>
-					<div class="col-12 form-group">
-						<label class="nott" for="template-contactform-message">Message <small>*</small></label>
-						<textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
-					</div>
-
-					<div class="col-12 form-group d-none">
-						<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-					</div>
-
-					<div class="col-12 form-group align-text-right">
-						<button class="button button-rounded button-large m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-					</div>
-
-					<input type="hidden" name="prefix" value="template-contactform-">
-
-				</form>
-
-			</div>
-
-		</div>
-
-	</div>
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -165,10 +99,6 @@
 								<a href="{{  url('/jp') }}" class="d-none d-lg-block text-dark"><i class="icon-line-globe"></i>&nbsp;JP</a>
 							</div><!-- #top-search end -->
 
-								|&nbsp;
-								<div id="side-panel-trigger"  class=" side-panel-trigger">
-									<a href="#" class="d-none d-lg-block text-dark"><i class="icon-comment2"></i></a>
-								</div><!-- #top-search end -->
 
 
 						</div>

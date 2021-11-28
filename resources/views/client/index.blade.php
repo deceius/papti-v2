@@ -1,13 +1,10 @@
-@extends('client.layouts.footer')
 
-@section('content')
+
+@include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 <!-- Slider
 ============================================= -->
-
-
 <section id="slider" class="slider-element revslider-wrap include-header h-auto">
     <div class="slider-inner">
-
         <!--
         #################################
             - THEMEPUNCH BANNER -
@@ -19,12 +16,11 @@
             <!-- START REVOLUTION SLIDER 5.1.4 fullwidth mode -->
             <div id="rev_slider_679_1" class="rev_slider fullwidthbanner" style="display:none; " data-version="5.1.4">
                 <ul style="color: #fff;">
-
-                @foreach ($banners as $banners)
+                @foreach ($banners as $banner)
                     <!-- SLIDE  -->
-                    <li class=" " data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="url('{{ $banners->getMedia('banners')[0]->getUrl() }}');" data-delay="10000"  data-saveperformance="off" data-title="Responsive Design">
+                    <li class=" " data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="url('{{ $banner->getMedia('image')[0]->getUrl() }}');" data-delay="10000"  data-saveperformance="off" data-title="Responsive Design">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ $banners->getMedia('banners')[0]->getUrl() }}"  alt="" data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <img src="{{ $banner->getMedia('image')[0]->getUrl() }}"  alt="" data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 2 -->
@@ -55,7 +51,7 @@
                         data-elementdelay="0.01"
                         data-endelementdelay="0.1"
                         data-endspeed="1000"
-                        data-endeasing="Power4.easeIn" style="z-index: 3; white-space: nowrap;">{{ $banners->en_title }}</div>
+                        data-endeasing="Power4.easeIn" style="z-index: 3; white-space: nowrap;">{{ $banner->en_title }}</div>
 
                         <div class="tp-caption customin ltl tp-resizeme revo-slider-desc-text"
                         data-x="middle" data-hoffset="0"
@@ -71,7 +67,7 @@
                         data-endelementdelay="0.1"
                         data-endspeed="1000"
                         data-textAlign="center"
-                        data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 650px; white-space: normal;">{{($lang == 'en') ? $banners->en_subtitle :  $banners->jp_subtitle}}</div>
+                        data-endeasing="Power4.easeIn" style="z-index: 3; max-width: 650px; white-space: normal;">{{($lang == 'en') ? $banner->en_subtitle :  $banner->jp_subtitle}}</div>
 
 
                     </li>
@@ -85,9 +81,4 @@
         @endif
     </div>
 </section>
-
-
-
-@endsection
-@extends(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
-
+@include('client.layouts.footer')

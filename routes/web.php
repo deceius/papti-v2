@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\LandingPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', function(){
+    return redirect('/en/home');
 });
+Route::get('/en', function(){
+    return redirect('/en/home');
+});
+Route::get('/jp', function(){
+    return redirect('/jp/home');
+});
+
+Route::get('/{loc}/home', [ LandingPageController::class, 'index'] );
+Route::get('/{loc}/about', [ LandingPageController::class, 'about']);
+
 
 
 /* Auto-generated admin routes */
