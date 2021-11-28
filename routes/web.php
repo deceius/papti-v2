@@ -30,6 +30,7 @@ Route::get('/{loc}/home', [ LandingPageController::class, 'index'] );
 Route::get('/{loc}/about', [ LandingPageController::class, 'about']);
 Route::get('/{loc}/technology', [ LandingPageController::class, 'technology']);
 Route::get('/{loc}/recruitment', [ LandingPageController::class, 'recruitment']);
+Route::get('/{loc}/contact', [ LandingPageController::class, 'contact']);
 
 
 Route::get('/{loc}/product-list', [ LandingPageController::class, 'products']);

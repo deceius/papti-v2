@@ -31,7 +31,8 @@ class LandingPageController extends Controller
 
         $this->saveLocationStats();
         $banners = Banner::all();
-        return view('client.index', ['banners' => $banners, 'lang' => $loc]);
+        $product_type = ProductApplication::all();
+        return view('client.index', ['product_types' => $product_type, 'banners' => $banners, 'lang' => $loc]);
     }
 
     public function about($loc){
@@ -76,6 +77,7 @@ class LandingPageController extends Controller
     }
 
     public function contact($loc){
-
+        $profile = CompanyProfile::first();
+        return view('client.contact', ['profile' => $profile, 'lang' => $loc ]);
     }
 }

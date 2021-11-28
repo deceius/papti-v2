@@ -28,11 +28,19 @@
 
                         @foreach ($product_types as $product_type)
                                     <div class="col-lg-4 col-md-3 col-sm-12 text-center">
-                                        <a href="{{ url('/'.$lang.'/product-application/'.$product_type->id)}}">
                                         <div class="card">
-                                         <div class="card-body row" >
-<div class="col-md-12">
-                                                <img src="{{ $product_type->getMedia('image')[0]->getUrl('thumb_200') }}" alt="{{ $product_type->en_name }}" width=80%>
+                                         <div class="card-body row">
+                                            <div class="col-md-12">
+                                                <div class="portfolio-image">
+                                                    <img src="{{ $product_type->getMedia('image')[0]->getUrl('thumb_200') }}" alt="{{ $product_type->en_name }}" width=80%>
+
+                                            </div>
+                                            <div class="bg-overlay">
+                                                <div class="bg-overlay-content dark animated fadeOut" data-hover-animate="fadeIn" style="animation-duration: 600ms;">
+                                                     <a href="{{ url('/'.$lang.'/product-application/'.$product_type->id)}}" class="overlay-trigger-icon bg-light text-dark animated fadeOutUpSmall" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" style="animation-duration: 350ms;"><i class="icon-line-ellipsis"></i></a>
+                                                </div>
+                                                <div class="bg-overlay-bg dark animated fadeOut" data-hover-animate="fadeIn" style="animation-duration: 600ms;"></div>
+                                            </div>
                                             </div>
                                             <div class="col-md-12 fbox-content mt-4">
                                                 <h3>{{ ($lang == 'en') ? $product_type->en_title : $product_type->jp_title }}</h3>
@@ -40,7 +48,6 @@
 
                                           </div>
                                         </div>
-                                    </a>
                                       </div>
                         @endforeach
 

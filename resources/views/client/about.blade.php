@@ -278,7 +278,7 @@
                         <div class="row align-items-stretch" style="max-width: 100%;">
                             <div class="col-md-4" style="background: url('/assets/images/PAPTI-3.jpg') center center no-repeat; background-size: cover;"></div>
                             <div class="col-lg-8 col-padding">
-                                {!! ($lang == 'en') ? $policy->en_ims : $policy->en_ims !!}
+                                {!! ($lang == 'en') ? $policy->en_ims : $policy->jp_ims !!}
                             </div>
                         </div>
                     </div>

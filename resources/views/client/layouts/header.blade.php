@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="/assets/css/interior-design.css" type="text/css" />
 	<link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
 	<link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
 
 	<link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
@@ -32,44 +33,10 @@
 	============================================= -->
 	<title>PAPTI</title>
 
-	<style>
 
-		.revo-slider-emphasis-text {
-			font-size: 64px;
-			font-weight: 700;
-			letter-spacing: -1px;
-			font-family: 'Poppins', sans-serif;
-			padding: 15px 20px;
-			border-top: 2px solid #FFF;
-			border-bottom: 2px solid #FFF;
-		}
+    <style>
 
-		.revo-slider-desc-text {
-			font-size: 20px;
-			font-family: 'Lato', sans-serif;
-			width: 650px;
-			text-align: center;
-			line-height: 1.5;
-		}
-
-		.revo-slider-caps-text {
-			font-size: 16px;
-			font-weight: 400;
-			letter-spacing: 3px;
-			font-family: 'Poppins', sans-serif;
-		}
-		.tp-video-play-button { display: none !important; }
-
-		.tp-caption { white-space: nowrap; }
-        .carousel-control-next{
-            filter: invert(100%);
-        }
-        .carousel-control-prev /*, .carousel-indicators */ {
-            filter: invert(100%);
-        }
-
-
-	</style>
+    </style>
 
 </head>
 

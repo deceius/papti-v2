@@ -31,7 +31,10 @@
 
 							<div class="line" style="margin: 1rem 0;"></div>
 
-							<p class="text-center"><strong>Sales Department:</strong> TEL (046) 437 2705 to 07 loc. 104, 105, 134, 145</p>
+							<div class="text-center">
+                                <p><strong>Sales Department:</strong> TEL (046) 437 2705 to 07 loc. 104, 105, 134, 145</p>
+                                <a href="{{ url('/'.$lang.'/contact')}}" target="_blank" class="button button-3d m-0 "><i class="icon-line-mail"></i>Click here for Inquiries</a>
+                               </div>
 						</div><!-- .portfolio-single-content end -->
 						<!-- Portfolio Single Image
 						============================================= -->
