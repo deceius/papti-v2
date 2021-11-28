@@ -22,12 +22,9 @@
             <div class="row gutter-40 col-mb-80">
                 <!-- Postcontent
                 ============================================= -->
-                <div class="postcontent col-lg-9">
+                <div class=" col-lg-9">
 
 
-                    <div class="form-widget">
-
-                        <div class="form-result"></div>
                        <p>
                            @if ($lang == 'en')
                            We will send your inquiry to the e-mail address you have provided. Please take a moment to fill in all the fields, and after confirming the contents, our staff will contact you.
@@ -36,14 +33,13 @@
                            @endif
 
                        </p>
-                        <form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
-
+                        <form class="mb-0" action="/sendEmail" method="post" role="form">
+                            @csrf
                             <div class="form-process">
                                 <div class="css3-spinner">
                                     <div class="css3-spinner-scaler"></div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label for="template-contactform-name">{{ ($lang == 'en') ? 'Your Name' : 'お名前'}} <small>*</small></label>
@@ -51,7 +47,7 @@
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for="template-contactform-name">{{ ($lang == 'en') ? 'Company Name' : '会社名'}} <small>*</small></label>
-                                    <input type="text" id="company-name" name="company-name" value="" class="sm-form-control required" />
+                                    <input type="text" id="company" name="company" value="" class="sm-form-control required" />
                                 </div>
 
                                 <div class="col-md-6 form-group">
@@ -61,7 +57,7 @@
 
                                 <div class="col-md-6 form-group">
                                     <label for="template-contactform-phone">{{ ($lang == 'en') ? 'Contact Number' : '電話番号 '}}</label>
-                                    <input type="text" id="phone" name="phone" value="" class="sm-form-control" />
+                                    <input type="text" id="contact" name="contact" value="" class="sm-form-control" />
                                 </div>
 
 
@@ -79,7 +75,7 @@
 
                                 <div class="col-12 form-group">
                                     <label for="template-contactform-message">{{ ($lang == 'en') ? 'Inquiry Details' : 'お問い合わせ内容'}} <small>*</small></label>
-                                    <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                                    <textarea class="required sm-form-control" id="details" name="details" rows="6" cols="30"></textarea>
                                 </div>
 
                                 <div class="col-12 form-group d-none">
@@ -87,14 +83,12 @@
                                 </div>
 
                                 <div class="col-12 form-group">
-                                    <button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+                                    <button class="button button-3d m-0" type="submit" >Submit</button>
                                 </div>
                             </div>
-
                             <input type="hidden" name="prefix" value="template-contactform-">
 
                         </form>
-                    </div>
 
                 </div><!-- .postcontent end -->
 

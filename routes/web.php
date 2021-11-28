@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Client\EmailSenderController;
 use App\Http\Controllers\Client\LandingPageController;
 use App\Http\Controllers\Client\LanguageController;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,7 @@ Route::get('/{loc}/product/{id}', [ LandingPageController::class, 'product']);
 Route::get('/change/{loc}/{page}', [ LanguageController::class, 'change']);
 
 
+Route::post('/sendEmail', [ EmailSenderController::class, 'sendEmail']);
 
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
