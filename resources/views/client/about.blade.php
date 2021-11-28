@@ -98,9 +98,9 @@
                 </div>
 
                 <div class="row align-items-stretch"  style="padding-top: 0px; margin: 0px 0px 0px 0px;">
-                    <div class="col-md-4 col-padding" style="background: url('/assets/images/papti.png') center center no-repeat; background-size: cover;"></div>
+                     <!--<div class="col-md-4 col-padding" style="background: url('/assets/images/papti.png') center center no-repeat; background-size: cover;"></div>-->
 
-                    <div class="col-md-8 col-padding" style="background-color: #F5F5F5;">
+                    <div class="col-md-12 col-padding" style="background-color: #F5F5F5;">
                         <div>
 
                             <div class="row col-mb-90">
@@ -154,10 +154,10 @@
 
                                         <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="tabs-5" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="false">
                                             <div class="row">
-                                                <div class="col-md-4 mb-4">
+                                                <div class="col-md-5 mb-4">
                                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1552.311390563898!2d120.872863!3d14.4026402!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33962cec6eaa5413%3A0x85c74a98754a6f91!2sPhilippine%20Advanced%20Processing%20Technology%2C%20Inc.!5e1!3m2!1sen!2sph!4v1638080798293!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-md-7">
                                                     <img src="/assets/images/papti/papti-cavite.jpg" width=100% class="mb-4">
                                                     <h4 style="mb-4">Main Factory / Office</h4>
                                                     <p>{{ $profile->company_address }}</p>
@@ -166,10 +166,10 @@
                                         </div>
                                         <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="tabs-6" aria-labelledby="ui-id-6" role="tabpanel" aria-hidden="true" style="display: none;">
                                             <div class="row">
-                                                <div class="col-md-4 mb-4">
+                                                <div class="col-md-5 mb-4">
                                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1554.9145029514452!2d121.1794818!3d14.0236172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6959c730b38f%3A0xd0407197c506db8d!2sPAPTI%20Lipa%20-%20Philippine%20Advance%20Processing%20Technology%20Inc.!5e1!3m2!1sen!2sph!4v1638080786505!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-md-7">
                                                     <img src="/assets/images/papti/papti-batangas.jpg" width=100% class="mb-4">
                                                     <h4 style="mb-4">Production Factory / Office</h4>
                                                     <p>{{ $profile->factory_address }}</p>
@@ -179,10 +179,10 @@
                                         </div>
                                         <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="tabs-7" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;">
                                             <div class="row">
-                                                <div class="col-md-4 mb-4">
+                                                <div class="col-md-5 mb-4">
                                                     <img src="/assets/images/papti/papti-thailand.jpg" width=100% class="mb-4">
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-md-7">
                                                     <h4 style="mb-4">Sales Office</h4>
                                                     <p>{{ $profile->sales_address }}</p>
                                                 </div>
