@@ -65,9 +65,9 @@
                                     <label for="template-contactform-service">{{ ($lang == 'en') ? 'Inquiry Item' : '電話番号 '}}</label>
                                     <select id="type" name="type" class="sm-form-control">
                                         <option value="">-- Select One --</option>
-                                        <option value="About our Products">{{ ($lang == 'en') ? 'About our product' : '製品について '}}</option>
-                                        <option value="Recruitment / Hiring">{{ ($lang == 'en') ? 'Recruitment / Hiring' : '募集・採用情報 '}}</option>
-                                        <option value="Others">{{ ($lang == 'en') ? 'Others' : 'その他 '}}</option>
+                                        <option value="PRODUCT">{{ ($lang == 'en') ? 'About our product' : '製品について '}}</option>
+                                        <option value="RECRUITMENT">{{ ($lang == 'en') ? 'Recruitment / Hiring' : '募集・採用情報 '}}</option>
+                                        <option value="OTHERS">{{ ($lang == 'en') ? 'Others' : 'その他 '}}</option>
                                     </select>
                                 </div>
 
