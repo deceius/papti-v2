@@ -1,5 +1,6 @@
 
 
+@section('current_url', 'technology')
 @include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 
 <!-- Page Title

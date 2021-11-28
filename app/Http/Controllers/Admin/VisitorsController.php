@@ -37,21 +37,20 @@ class VisitorsController extends Controller
             $request,
 
             // set columns to query
-            ['id', 'country_code'],
+            ['country_code', 'count'],
 
             // set columns to searchIn
-            ['id', 'country_code']
+            ['country_code']
         );
 
         if ($request->ajax()) {
             if ($request->has('bulk')) {
                 return [
-                    'bulkItems' => $data->pluck('id')
+                    'bulkItems' => $data->pluck('country_code')
                 ];
             }
             return ['data' => $data];
         }
-
         return view('admin.visitor.index', ['data' => $data]);
     }
 

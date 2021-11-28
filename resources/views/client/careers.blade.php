@@ -1,6 +1,7 @@
-@extends('client.layouts.footer')
 
-@section('content')
+
+@section('current_url', 'recruitment')
+@include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 
 <!-- Page Title
 ============================================= -->
@@ -51,6 +52,6 @@
 
 
 
-@endsection
 
-@extends(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
+
+@include('client.layouts.footer')

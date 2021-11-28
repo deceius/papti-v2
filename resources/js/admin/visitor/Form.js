@@ -6,6 +6,7 @@ Vue.component('visitor-form', {
         return {
             form: {
                 country_code:  '' ,
+                count:  '' ,
                 
             }
         }

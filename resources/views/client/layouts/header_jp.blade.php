@@ -91,7 +91,7 @@
 
 						<div class="header-misc">
 							<div id="side-panel-trigger" style="padding-left: 4px;">
-								<a href="{{ url('/en') }}" class="d-none d-lg-block text-dark"><i class="icon-line-globe"></i>&nbsp;EN</a>
+								<a href="/change/en/@yield('current_url')" class="d-none d-lg-block text-dark"><i class="icon-line-globe"></i>&nbsp;EN</a>
 							</div><!-- #top-search end -->
 
 
@@ -110,7 +110,7 @@
 							<ul class="menu-container">
 								<li class="menu-item current"><a class="menu-link" href="{{ url('jp') }}"><div>Home</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/about') }}"><div>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/product') }}"><div>Products</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/product-list') }}"><div>Products</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/technology') }}"><div>Technology</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/recruitment') }}"><div>Recruitment</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/contact') }}"><div>Contact</div></a></li>

@@ -1,5 +1,6 @@
 
 
+@section('current_url', 'about')
 @include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 <style>
     .papti-about table, tr, td {

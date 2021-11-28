@@ -27,6 +27,7 @@ class StoreVisitor extends FormRequest
     {
         return [
             'country_code' => ['required', 'string'],
+            'count' => ['required', 'string'],
             
         ];
     }

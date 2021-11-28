@@ -443,6 +443,7 @@ return [
         'columns' => [
             'id' => 'ID',
             'country_code' => 'Country code',
+            'count' => 'Count',
 
         ],
     ],

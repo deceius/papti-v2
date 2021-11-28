@@ -1,6 +1,6 @@
-@extends('client.layouts.footer')
 
-@section('content')
+@section('current_url',  'product_'.$id)
+@include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 
 		<!-- Page Title
 		============================================= -->
@@ -36,7 +36,7 @@
 						<!-- Portfolio Single Image
 						============================================= -->
 						<div class="col-lg-4 portfolio-single-image">
-							<img src="{{ $product->getMedia('product')[0]->getUrl() }}" alt="{{ $product->en_name}}">
+							<img src="{{ $product->getMedia('image')[0]->getUrl() }}" alt="{{ $product->en_name}}">
 						</div><!-- .portfolio-single-image end -->
 
 
@@ -47,6 +47,6 @@
 			</div>
 		</section><!-- #content end -->
 
-@endsection
+@include('client.layouts.footer')
 
-@extends(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
+

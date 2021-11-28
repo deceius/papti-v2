@@ -14,9 +14,8 @@ class Visitors extends Migration
     public function up()
     {
         Schema::create('visitors', function (Blueprint $table) {
-            $table->increments('id');
-
-            $table->string('country_code');
+            $table->string('country_code')->primary();
+            $table->bigInteger('count')->default(0);
 
 
 

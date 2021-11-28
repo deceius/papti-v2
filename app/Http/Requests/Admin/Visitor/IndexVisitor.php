@@ -25,7 +25,7 @@ class IndexVisitor extends FormRequest
     public function rules(): array
     {
         return [
-            'orderBy' => 'in:id,country_code|nullable',
+            'orderBy' => 'in:country_code,count|nullable',
             'orderDirection' => 'in:asc,desc|nullable',
             'search' => 'string|nullable',
             'page' => 'integer|nullable',

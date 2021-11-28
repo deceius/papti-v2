@@ -8,15 +8,14 @@ class Visitor extends Model
 {
     protected $fillable = [
         'country_code',
-    
+        'count',
+
     ];
-    
-    
-    protected $dates = [
-    
-    ];
+
+
+    protected $primaryKey = 'country_code';
     public $timestamps = false;
-    
+    public $incrementing = false;
     protected $appends = ['resource_url'];
 
     /* ************************ ACCESSOR ************************* */

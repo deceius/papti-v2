@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Client\LandingPageController;
+use App\Http\Controllers\Client\LanguageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,13 @@ Route::get('/{loc}/home', [ LandingPageController::class, 'index'] );
 Route::get('/{loc}/about', [ LandingPageController::class, 'about']);
 Route::get('/{loc}/technology', [ LandingPageController::class, 'technology']);
 Route::get('/{loc}/recruitment', [ LandingPageController::class, 'recruitment']);
+
+
+Route::get('/{loc}/product-list', [ LandingPageController::class, 'products']);
+Route::get('/{loc}/product-application/{id}', [ LandingPageController::class, 'product_application']);
+Route::get('/{loc}/product/{id}', [ LandingPageController::class, 'product']);
+
+Route::get('/change/{loc}/{page}', [ LanguageController::class, 'change']);
 
 
 
@@ -192,6 +200,22 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('visitors')->name('visitors/')->group(static function() {
+            Route::get('/',                                             'VisitorsController@index')->name('index');
+            Route::get('/create',                                       'VisitorsController@create')->name('create');
+            Route::post('/',                                            'VisitorsController@store')->name('store');
+            Route::get('/{visitor}/edit',                               'VisitorsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'VisitorsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{visitor}',                                   'VisitorsController@update')->name('update');
+            Route::delete('/{visitor}',                                 'VisitorsController@destroy')->name('destroy');
+        });
+    });
+});
+
 
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {

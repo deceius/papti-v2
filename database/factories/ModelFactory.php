@@ -181,3 +181,12 @@ $factory->define(App\Models\Visitor::class, static function (Faker\Generator $fa
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Visitor::class, static function (Faker\Generator $faker) {
+    return [
+        'country_code' => $faker->sentence,
+        'count' => $faker->sentence,
+        
+        
+    ];
+});

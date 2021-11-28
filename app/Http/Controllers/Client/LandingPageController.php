@@ -8,14 +8,28 @@ use App\Models\CertificationPolicy;
 use App\Models\CompanyHistory;
 use App\Models\CompanyProfile;
 use App\Models\PresidentMessage;
+use App\Models\Product;
+use App\Models\ProductApplication;
 use App\Models\Recruitment;
 use App\Models\Technology;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
+use Stevebauman\Location\Facades\Location;
 
 class LandingPageController extends Controller
 {
 
+    function saveLocationStats(){
+        $location = Location::get();
+        $visitor = Visitor::firstOrNew(['country_code' => $location->countryName]);
+        $visitor->count++;
+        $visitor->save();
+
+    }
+
     public function index($loc){
+
+        $this->saveLocationStats();
         $banners = Banner::all();
         return view('client.index', ['banners' => $banners, 'lang' => $loc]);
     }
@@ -39,16 +53,19 @@ class LandingPageController extends Controller
         return view('client.technology', ['technology' => $technology, 'lang' => $loc]);
     }
 
-    public function product_types($loc){
-
+    public function products($loc){
+        $product_type = ProductApplication::all();
+        return view('client.product-types', ['product_types' => $product_type, 'lang' => $loc ]);
     }
 
-    public function product_type($loc){
-
+    public function product_application($loc, $id){
+        $products = Product::where(['product_application_id' => $id])->get();
+        return view('client.product', ['id' => $id, 'products' => $products, 'lang' => $loc ]);
     }
 
-    public function product($loc){
-
+    public function product($loc, $id){
+        $product = Product::find($id);
+        return view('client.product-view', ['id' => $id, 'product' => $product, 'lang' => $loc]);
     }
 
     public function recruitment($loc){

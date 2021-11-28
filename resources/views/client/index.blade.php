@@ -1,5 +1,7 @@
 
 
+
+@section('current_url', 'home')
 @include(($lang == 'en') ? 'client.layouts.header' : 'client.layouts.header_jp')
 <!-- Slider
 ============================================= -->

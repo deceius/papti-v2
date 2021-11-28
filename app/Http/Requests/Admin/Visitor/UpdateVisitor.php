@@ -27,6 +27,7 @@ class UpdateVisitor extends FormRequest
     {
         return [
             'country_code' => ['sometimes', 'string'],
+            'count' => ['sometimes', 'string'],
             
         ];
     }
