@@ -15,7 +15,7 @@
 					<div class="row col-mb-30">
 
 						<div class="col-md-6 text-center text-md-start">
-							Copyrights &copy; 2021 PAPTI.<br>
+							Copyright &copy; 2021 PAPTI.<br>
 							{{-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> --}}
 						</div>
 

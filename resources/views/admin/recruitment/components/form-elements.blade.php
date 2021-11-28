@@ -32,7 +32,7 @@
 
 </div>
 <div class="card-header">
-    <i class="fa fa-comment"></i> [EN] Vision Statement
+    <i class="fa fa-comment"></i> [JP] Recruitment Details
 </div>
 
 <div class="card-body">

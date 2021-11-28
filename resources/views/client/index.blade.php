@@ -82,5 +82,8 @@
 
         @endif
     </div>
+    <marquee behavior="scroll" direction="left">
+        <img src="/assets/images/papti/papti-logo.png"  alt="Flying Bat">
+        </marquee>
 </section>
 @include('client.layouts.footer')

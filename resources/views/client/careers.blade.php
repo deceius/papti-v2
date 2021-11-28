@@ -42,7 +42,7 @@
                     <h2>{{  ($lang == 'en') ? $recruitment->en_header : $recruitment->jp_header }}</h2>
                 </div>
             <p>{!! ($lang == 'en') ? $recruitment->en_details : $recruitment->jp_details !!}</p>
-            <p>Please send inquiry for interested applicants or send resume at:<br><a href="mailto:paptirecruitment@gmail.com" target="_blank">paptirecruitment@gmail.com</a></p>
+            <p>Please send inquiry for interested applicants or send resume at: <a href="mailto:paptirecruitment@gmail.com" target="_blank">paptirecruitment@gmail.com</a></p>
 
         </div>
 
