@@ -15,9 +15,7 @@
 
             <form class="form-horizontal form-create" method="post" @submit.prevent="onSubmit" :action="action" novalidate>
 
-                <div class="card-header">
-                    <i class="fa fa-plus"></i> {{ trans('admin.president-message.actions.create') }}
-                </div>
+
 
                     @include('admin.president-message.components.form-elements')
 

@@ -22,21 +22,33 @@
     </div>
 </div>
 
+</div>
+<div class="card-header">
+    <i class="fa fa-comment"></i> [EN] President Message
+</div>
+
+<div class="card-body">
 <div class="form-group row align-items-center" :class="{'has-danger': errors.has('en_message'), 'has-success': fields.en_message && fields.en_message.valid }">
-    <label for="en_message" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.president-message.columns.en_message') }}</label>
-    <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
+    {{-- <label for="en_message" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.president-message.columns.en_message') }}</label> --}}
+    <div :class="isFormLocalized ? 'col-md-12' : 'col-md-12'">
         <div>
-            <textarea class="form-control" v-model="form.en_message" v-validate="'required'" id="en_message" name="en_message"></textarea>
+            <wysiwyg v-model="form.en_message" v-validate="'required'" id="text" name="text" :config="mediaWysiwygConfig" />
         </div>
         <div v-if="errors.has('en_message')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('en_message') }}</div>
     </div>
 </div>
 
+</div>
+<div class="card-header">
+    <i class="fa fa-comment"></i> [JP] President Message
+</div>
+
+<div class="card-body">
 <div class="form-group row align-items-center" :class="{'has-danger': errors.has('jp_message'), 'has-success': fields.jp_message && fields.jp_message.valid }">
-    <label for="jp_message" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.president-message.columns.jp_message') }}</label>
-    <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
+    {{-- <label for="jp_message" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.president-message.columns.jp_message') }}</label> --}}
+    <div :class="isFormLocalized ? 'col-md-12' : 'col-md-12'">
         <div>
-            <textarea class="form-control" v-model="form.jp_message" v-validate="'required'" id="jp_message" name="jp_message"></textarea>
+            <wysiwyg v-model="form.jp_message" v-validate="'required'" id="text" name="text" :config="mediaWysiwygConfig" />
         </div>
         <div v-if="errors.has('jp_message')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('jp_message') }}</div>
     </div>

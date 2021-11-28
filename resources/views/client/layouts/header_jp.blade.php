@@ -112,7 +112,7 @@
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/about') }}"><div>About</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/product') }}"><div>Products</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/technology') }}"><div>Technology</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/careers') }}"><div>Recruitment</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/recruitment') }}"><div>Recruitment</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/jp/contact') }}"><div>Contact</div></a></li>
 							</ul>
 

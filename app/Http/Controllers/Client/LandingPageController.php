@@ -8,6 +8,8 @@ use App\Models\CertificationPolicy;
 use App\Models\CompanyHistory;
 use App\Models\CompanyProfile;
 use App\Models\PresidentMessage;
+use App\Models\Recruitment;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -31,6 +33,12 @@ class LandingPageController extends Controller
             'lang' => $loc ]);
     }
 
+    public function technology($loc){
+
+        $technology = Technology::all();
+        return view('client.technology', ['technology' => $technology, 'lang' => $loc]);
+    }
+
     public function product_types($loc){
 
     }
@@ -44,7 +52,10 @@ class LandingPageController extends Controller
     }
 
     public function recruitment($loc){
+        $recruitment = Recruitment::first();
 
+
+        return view('client.careers', ['recruitment' => $recruitment, 'lang' => $loc]);
     }
 
     public function contact($loc){

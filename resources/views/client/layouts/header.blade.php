@@ -116,7 +116,7 @@
 								<li class="menu-item"><a class="menu-link" href="{{ url('/en/about') }}"><div>About</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/en/product') }}"><div>Products</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/en/technology') }}"><div>Technology</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="{{ url('/en/careers') }}"><div>Recruitment</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="{{ url('/en/recruitment') }}"><div>Recruitment</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="{{ url('/en/contact') }}"><div>Contact</div></a></li>
 							</ul>
 

@@ -1,7 +1,7 @@
 
 @include('brackets/admin-ui::admin.includes.media-uploader', [
-    'mediaCollection' => app(App\Models\ProductApplication::class)->getMediaCollection('image'),
-    'media' => isset($productApplication)  ? $productApplication->getThumbs200ForCollection('image') : null,
+    'mediaCollection' => app(App\Models\Technology::class)->getMediaCollection('image'),
+    'media' => isset($technology)  ? $technology->getThumbs200ForCollection('image') : null,
     'label' => 'Image'
 ])
 

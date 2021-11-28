@@ -16,13 +16,10 @@
                 <form class="form-horizontal form-edit" method="post" @submit.prevent="onSubmit" :action="action" novalidate>
 
 
-                    <div class="card-header">
-                        <i class="fa fa-pencil"></i> {{ trans('admin.certification-policy.actions.edit', ['name' => 'Certification Policy']) }}
-                    </div>
 
-                    <div class="card-body">
-                        @include('admin.certification-policy.components.form-elements')
-                    </div>
+
+
+                    @include('admin.certification-policy.components.form-elements')
 
 
                     <div class="card-footer">

@@ -27,6 +27,8 @@ Route::get('/jp', function(){
 
 Route::get('/{loc}/home', [ LandingPageController::class, 'index'] );
 Route::get('/{loc}/about', [ LandingPageController::class, 'about']);
+Route::get('/{loc}/technology', [ LandingPageController::class, 'technology']);
+Route::get('/{loc}/recruitment', [ LandingPageController::class, 'recruitment']);
 
 
 

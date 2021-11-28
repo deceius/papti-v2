@@ -5,10 +5,11 @@
             <li class="nav-item"><a class="nav-link" href="{{ url('admin/banners') }}"><i class="nav-icon icon-film"></i> {{ trans('admin.banner.title') }}</a></li>
 
             <li class="nav-title">Company Details</li>
+            <li class="nav-item"><a class="nav-link" href="{{ url('admin/company-profiles') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.company-profile.title') }}</a></li>
+
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/president-messages') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.president-message.title') }}</a></li>
-           <li class="nav-item"><a class="nav-link" href="{{ url('admin/company-histories') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.company-history.title') }}</a></li>
-           <li class="nav-item"><a class="nav-link" href="{{ url('admin/company-profiles') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.company-profile.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/certification-policies') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.certification-policy.title') }}</a></li>
+           <li class="nav-item"><a class="nav-link" href="{{ url('admin/company-histories') }}"><i class="nav-icon icon-speech"></i> {{ trans('admin.company-history.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/recruitments') }}"><i class="nav-icon icon-folder"></i> {{ trans('admin.recruitment.title') }}</a></li>
 
 

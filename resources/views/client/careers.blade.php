@@ -22,25 +22,25 @@
                 <h2>Our Company</h2>
             </div>
             <div class="row mt-10">
-                
+
                 <div class="col-lg-12">
                     <div class="heading-block center">
                         <h3>Mission</h3>
                 </div>
-                    <p>{!! ($lang == 'en') ? $profile->en_mission : $profile->jp_mission !!}</p>
+                    <p>{!! ($lang == 'en') ? $recruitment->en_mission : $recruitment->jp_mission !!}</p>
                 </div>
                 <div class="col-lg-12">
                                     <div class="heading-block center">
                         <h3>Vision</h3>
                 </div>
-                    <p>{!! ($lang == 'en') ? $profile->en_vision : $profile->jp_vision !!}</p>
+                    <p>{!! ($lang == 'en') ? $recruitment->en_vision : $recruitment->jp_vision !!}</p>
                 </div>
             </div>
-           
-                            <div class="heading-block center">
-                    <h2>{!! $profile->en_recruitment_title !!}</h2>
+
+                            <div class="fancy_title title-bottom-border">
+                    <h2>{{  ($lang == 'en') ? $recruitment->en_header : $recruitment->jp_header }}</h2>
                 </div>
-            <p>{!! ($lang == 'en') ? $profile->en_recruitment_details : $profile->jp_recruitment_details !!}</p>
+            <p>{!! ($lang == 'en') ? $recruitment->en_details : $recruitment->jp_details !!}</p>
             <p>Please send inquiry for interested applicants or send resume at:<br><a href="mailto:paptirecruitment@gmail.com" target="_blank">paptirecruitment@gmail.com</a></p>
 
         </div>

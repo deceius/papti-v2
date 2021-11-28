@@ -151,8 +151,8 @@ return [
             'email_company' => 'Email company',
             'email_hr' => 'Email hr',
             'email_sales' => 'Email sales',
-            'en_production_line' => 'En production line',
-            'jp_production_line' => 'Jp production line',
+            'en_production_line' => '[EN] Production Line',
+            'jp_production_line' => '[JP] Production Line',
 
         ],
     ],
@@ -382,8 +382,8 @@ return [
             'email_company' => 'Email company',
             'email_hr' => 'Email hr',
             'email_sales' => 'Email sales',
-            'en_production_line' => 'En production line',
-            'jp_production_line' => 'Jp production line',
+            'en_production_line' => '[EN] Production Line',
+            'jp_production_line' => '[JP] Production Line',
 
         ],
     ],
